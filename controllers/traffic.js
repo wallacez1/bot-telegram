@@ -7,7 +7,7 @@ const tg = Telegram.TelegramBaseController
 var distance = require('google-distance-matrix');
 var origins = [];
 var destinations = [];
-var travelMode =[];
+
 var meio = ''
 
 distance.key(process.env.GOOGLE_KEY);
