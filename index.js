@@ -1,18 +1,16 @@
-
+'use strict'
 require('dotenv').config();
 var express = require('express')
 var app = express();
 
 const Telegram = require('telegram-node-bot')
 const tg = new Telegram.Telegram(process.env.TELEGRAM_KEY, {
-    
+    workers: 1
 })
 
-var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
-var server_host = process.env.YOUR_HOST || '0.0.0.0';
-app.server.listen(server_port, server_host, function() {
-    console.log('Listening on port %d', server_port);
-});
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
 
 const TrafficInfoController = require('./controllers/traffic')
 const OtherwiseController = require('./controllers/otherwise')
