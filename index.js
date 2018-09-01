@@ -1,14 +1,12 @@
 'use strict'
-const server = require('server');
+var app = require('../app');
 
-const { get, post } = server.router;
+app.set('port', process.env.PORT || 3000);
 
-// Launch server
-server({ port: 3000 }, [  
-    get('/', ctx => 'Hello world!')
-]);
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+});
 
-server=server.listen(process.env.PORT || port)
 
 const Telegram = require('telegram-node-bot')
 const tg = new Telegram.Telegram('679789296:AAGIcT46kgNDwyzbAI5RpVVCo-54DvJ9fZo', {
