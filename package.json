@@ -12,6 +12,7 @@
   "dependencies": {
     "@google/maps": "^0.5.5",
     "dotenv": "^6.0.0",
+    "express": "^4.16.3",
     "google-distance-matrix": "^1.1.1",
     "node-telegram-bot-api": "^0.30.0",
     "telegram-node-bot": "^4.0.5"

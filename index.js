@@ -1,5 +1,6 @@
 'use strict'
 require('dotenv').config();
+var app = express();
 
 const Telegram = require('telegram-node-bot')
 const tg = new Telegram.Telegram(process.env.TELEGRAM_KEY, {
