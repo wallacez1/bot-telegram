@@ -8,9 +8,7 @@ const tg = new Telegram.Telegram(process.env.TELEGRAM_KEY, {
     
 })
 
-app.listen(process.env.PORT, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-  });
+.listen(process.env.PORT || 5000)
 
 const TrafficInfoController = require('./controllers/traffic')
 const OtherwiseController = require('./controllers/otherwise')
