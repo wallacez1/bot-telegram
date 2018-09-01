@@ -7,7 +7,6 @@ const tg = Telegram.TelegramBaseController
 var distance = require('google-distance-matrix');
 var origins = [];
 var destinations = [];
-
 var meio = ''
 
 distance.key(process.env.GOOGLE_KEY);
@@ -15,7 +14,7 @@ distance.key(process.env.GOOGLE_KEY);
 class TrafficInfoController extends Telegram.TelegramBaseController{
   
     traficHandler($) { 
-        
+   
         const form = {
             origem: {
                 q: 'Digite Seu endereço de origem',
@@ -96,7 +95,7 @@ class TrafficInfoController extends Telegram.TelegramBaseController{
             origins = [result.origem]
             destinations = [result.destino]
             distance.matrix(origins, destinations, function (err, distances) {  
-                           
+                           console.log('dentro da matrix',mode)
                 if (err) {
                     return console.log(err);
                 }
