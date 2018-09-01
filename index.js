@@ -3,7 +3,7 @@
 
 
 const Telegram = require('telegram-node-bot')
-const tg = new Telegram.Telegram(process.env.TELEGRAM_KEY, {
+const tg = new Telegram.Telegram('679789296:AAGIcT46kgNDwyzbAI5RpVVCo-54DvJ9fZo', {
     workers: 1
 })
 
