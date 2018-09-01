@@ -1,5 +1,5 @@
 'use strict'
-var app = require('../app');
+var app = express()
 
 app.set('port', process.env.PORT || 3000);
 
