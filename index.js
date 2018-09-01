@@ -8,7 +8,7 @@ const tg = new Telegram.Telegram(process.env.TELEGRAM_KEY, {
     
 })
 
-.listen(process.env.PORT || 5000)
+app.listen(process.env.PORT || 5000)
 
 const TrafficInfoController = require('./controllers/traffic')
 const OtherwiseController = require('./controllers/otherwise')
